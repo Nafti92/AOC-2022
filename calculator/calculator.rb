@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def calculate(num1, num2, operator)
   # if operator == "+"
   #   result = num1 + num2

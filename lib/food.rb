@@ -1,4 +1,5 @@
-# rubocop:disable Naming/UncommunicativeMethodParamName
+# frozen_string_literal: true
+
 class Food
   attr_reader :x, :y
 
@@ -18,4 +19,3 @@ class Food
     Food.new(x, y)
   end
 end
-# rubocop:enable Naming/UncommunicativeMethodParamName

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'gosu'
 require_relative 'snake'
 require_relative 'food'
@@ -10,7 +12,7 @@ class Game < Gosu::Window
 
   def initialize
     super WIDTH * Snake::SIZE, HEIGHT * Snake::SIZE
-    self.caption = "Snake"
+    self.caption = 'Snake'
 
     @last_move = Time.now
     reset_snake
@@ -43,7 +45,7 @@ class Game < Gosu::Window
   def reset_snake
     @snake = Snake.new(WIDTH, HEIGHT)
     @speed = START_SPEED
-    sound("start").play
+    sound('start').play
   end
 
   def reset_food
@@ -51,14 +53,14 @@ class Game < Gosu::Window
   end
 
   def set_snake_direction_from_keyboard
-    if turn?(Gosu::KB_LEFT, "right")
-      @snake.direction = "left"
-    elsif turn?(Gosu::KB_RIGHT, "left")
-      @snake.direction = "right"
-    elsif turn?(Gosu::KB_UP, "bottom")
-      @snake.direction = "top"
-    elsif turn?(Gosu::KB_DOWN, "top")
-      @snake.direction = "bottom"
+    if turn?(Gosu::KB_LEFT, 'right')
+      @snake.direction = 'left'
+    elsif turn?(Gosu::KB_RIGHT, 'left')
+      @snake.direction = 'right'
+    elsif turn?(Gosu::KB_UP, 'bottom')
+      @snake.direction = 'top'
+    elsif turn?(Gosu::KB_DOWN, 'top')
+      @snake.direction = 'bottom'
     end
   end
 
@@ -76,8 +78,8 @@ class Game < Gosu::Window
   def eat
     reset_food
     @snake.length += 1
-    sound("eat").play
-    @speed = @speed * 0.95
+    sound('eat').play
+    @speed *= 0.95
   end
 
   def sound(type)

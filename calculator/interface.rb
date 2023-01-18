@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'calculator'
 # TODO: you can build your calculator program here!
 

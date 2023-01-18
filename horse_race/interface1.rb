@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Define the horses
 horses = ['Joe the Brave', 'Black Stalion', 'Ronny the Rat', 'Tony Macaroni']
 

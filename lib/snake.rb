@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Snake
   SIZE = 20
 
@@ -9,7 +11,7 @@ class Snake
     @y = 0
     @tail = []
     @length = 1
-    @direction = "right"
+    @direction = 'right'
   end
 
   def move
@@ -17,10 +19,10 @@ class Snake
     @tail.pop if @tail.size == @length
 
     case @direction
-    when "right" then @x += SIZE
-    when "left" then @x -= SIZE
-    when "bottom" then @y += SIZE
-    when "top" then @y -= SIZE
+    when 'right' then @x += SIZE
+    when 'left' then @x -= SIZE
+    when 'bottom' then @y += SIZE
+    when 'top' then @y -= SIZE
     end
   end
 
