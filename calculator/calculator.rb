@@ -17,11 +17,9 @@ def calculate(num1, num2, operator)
 
   # simplified:
   case operator
-  when "+" then return num1 + num2
-  when "-" then return num1 - num2
-  when "*" then return num1 * num2
-  when "/" then return num1.to_f / num2
-  else
-    return nil
+  when '+' then num1 + num2
+  when '-' then num1 - num2
+  when '*' then num1 * num2
+  when '/' then num1.to_f / num2
   end
 end
