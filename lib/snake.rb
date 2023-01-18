@@ -27,3 +27,11 @@ class Snake
   def eat?(food)
     @x == food.x && @y == food.y
   end
+
+  def draw
+    Gosu.draw_rect(@x, @y, SIZE, SIZE, Gosu::Color::WHITE)
+    @tail.each do |tail|
+      Gosu.draw_rect(tail.first, tail.last, SIZE, SIZE, Gosu::Color::WHITE)
+    end
+  end
+end
