@@ -11,3 +11,15 @@ class Snake
     @length = 1
     @direction = "right"
   end
+
+  def move
+    @tail.unshift([@x, @y])
+    @tail.pop if @tail.size == @length
+
+    case @direction
+    when "right" then @x += SIZE
+    when "left" then @x -= SIZE
+    when "bottom" then @y += SIZE
+    when "top" then @y -= SIZE
+    end
+  end
