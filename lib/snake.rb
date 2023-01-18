@@ -23,3 +23,7 @@ class Snake
     when "top" then @y -= SIZE
     end
   end
+
+  def eat?(food)
+    @x == food.x && @y == food.y
+  end
