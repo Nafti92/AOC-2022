@@ -71,3 +71,30 @@ a:hover {
   color: #636363;
   text-decoration: none;
 }
+
+@media(max-width: 900px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media(max-width: 750px) {
+  .container {
+    width: 450px;
+  }
+}
+
+@media(max-width: 500px) {
+  .container {
+    width: 350px;
+  }
+  .banner {
+    padding: 50px 0;
+  }
+  .banner h1 {
+    font-size: 2em;
+  }
+  .banner p {
+    font-size: 1em;
+  }
+}
